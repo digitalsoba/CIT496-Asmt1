@@ -9,7 +9,8 @@ from pycipher import Caesar, ColTrans
 from collections import OrderedDict
 
 ciphertext = 'HUKUUEUUYREUYYKGRRGNZZKXNGNOLKXTSAQNZYEGNZTRGTOYALSSEHSYGRVSOOLEGIKVKNZOEJYXT'
-six = 'BOEOOYOOSLYOSSEALLAHTTERHAHIFERNMUKHTSYAHTNLANISUFMMYBMSALPMIIFYACEPEHTIYDSRN' #Key shift 6 looks the most human readable
+# Key shift 6 looks the most human readable
+six = 'BOEOOYOOSLYOSSEALLAHTTERHAHIFERNMUKHTSYAHTNLANISUFMMYBMSALPMIIFYACEPEHTIYDSRN'
 outputfile = 'output.txt'
 
 # PyCi Caesar Cipher
@@ -19,7 +20,7 @@ def caesar_Salad(ciphertext):
         caesar_shift[x] = Caesar(x).decipher(ciphertext)
     return caesar_shift
 
-#PyCi Col Transposition
+# PyCi Col Transposition
 def colTranspo(text):
     colOrder = create_permutations('01234567')
     colPos = {}
@@ -33,11 +34,8 @@ def create_permutations(string):
     perm = [''.join(i) for i in permutations(string)]
     return perm
 
-
 #print (caesar_Salad(ciphertext))
 #print (create_permutations('01234567'))
-#Run python3 noodle.py > colTrans.txt
-one =  (colTranspo(six))
-print (one)
-
+# Run python3 noodle.py > colTrans.txt
+print (colTranspo(six))
 # BEHAPPYFORTHEMOMENTTHISMOMENTISYOURLIFEBYKHAYYAMOHANDALSOTHISCLASSISREALLYFUN

@@ -2,26 +2,10 @@
 
 from collections import OrderedDict
 
-OUTPUTFILE = 'colTrans.txt'
+INFILE = 'colTrans.txt'
 
-def attack(words):
-    with open(OUTPUTFILE) as data_file:
-        results = {}
-
-        for line in data_file:
-            cols, string = line.strip().split(',')
-            results[string] = []
-
-            for _word in words:
-                word = _word.strip().upper()
-
-                if len(word) < 3:
-                    continue
-
-                if word in string:
-                    results[string].append(word)
-
-        sortedResults = OrderedDict(sorted(results.iteritems(), key=lambda x: len(x[1]), reverse=True))
+def attack(dictionary):
+    pass
 
 def dictionary():
 
