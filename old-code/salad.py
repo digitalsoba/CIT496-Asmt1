@@ -1,7 +1,6 @@
 PMAX_KEY_SIZE = 26
 message = 'HUKUUEUUYREUYYKGRRGNZZKXNGNOLKXTSAQNZYEGNZTRGTOYALSSEHSYGRVSOOLEGIKVKNZOEJYX'
-#yea boi
-#its happening
+#oof yikes @ earl
 
 
 def getTranslatedMessage(message,key):
